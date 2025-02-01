@@ -1,0 +1,71 @@
+/* Written by Matthew Bass
+     for MSSE 661 Web Software Development
+     Regis University
+     Week 2  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    height: 50px;
+    width: 100%;
+}
+
+nav {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+}
+
+li {
+    float: left;
+    padding: 0 20px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    min-height: 750px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.items {
+   width: 100vw;
+   height: 50%;
+   display: block;
+}
+
+.inner {
+    justify-content: center;
+    margin: 40%;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
