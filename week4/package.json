@@ -1,0 +1,19 @@
+{
+  "name": "week-4",
+  "version": "4.0.0",
+  "description": "providing login functionality",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MBass-ador/MSSE-661/Week4.git"
+  },
+  "author": "Matthew Bass",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "3.1.9"
+  }
+}
