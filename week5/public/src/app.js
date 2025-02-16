@@ -23,7 +23,7 @@ const doLogin =  async (e) => {
   setStorage('access_token', access_token);
   setStorage('refresh_token', refresh_token);
 
-  window.location.href = 'index.html';
+  window.location.href = 'home.html';
 };
 
 
