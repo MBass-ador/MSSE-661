@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Written by Matthew Bass
+     for MSSE 661 Web Software Development
+     Regis University
+     Updated for week 5 -->
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./css/fluidLayout.css">
+        <title>Login Page</title>
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+<!--    login page should not have navigation   -->
+            </header>
+
+            <div class="content">
+                <div class="items">
+                    <h2>Login</h2>
+
+                    <form novalidate>
+                      <label for="username">
+                        <span>Username:</span>
+                        <input id="username" type="text" placeholder="Username" />
+                      </label>
+
+                      <label for="password">
+                        <span>Password:</span>
+                        <input id="password" type="password" placeholder="Password" />
+                      </label>
+
+                      <button onclick="doLogin(event)">Submit</button>
+                      
+                      <a href="./registration.html">Sign Up</a>
+                    </form> 
+
+                </div>
+            </div>
+            
+        </div>
+    
+
+    <footer>
+        <p id="foot">Created by Matthew Bass: mbass001@regis.edu</p>
+    </footer>
+
+    <script src="./src/api.config.js"></script>
+    <script src="./src/simple-storage.js"></script>
+    <script src="./src/service-helpers.js"></script>
+    <script src="./src/auth.service.js"></script>
+    <script src="./src/app.js"></script>
+
+    </body>
+</html>
