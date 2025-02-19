@@ -1,8 +1,10 @@
-// routes enforce valid authToken
+// routes enforced based on isAuth value from browser storage
 (() => {
-    // cut off routes to browser w no authToken
-    if (storageHasData() && !getStorage('isAuth')) {
-      logout();
-      window.location.href = '/index.html';
-    }
-  })();
+  const isAuth = getStorage('isAuth');
+  if (!isAuth) {
+    logout();
+    alert('log in to view test register');
+    // return to login page (index.html)
+    window.location.href = '/index.html';
+  }
+})();
