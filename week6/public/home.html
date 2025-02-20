@@ -2,46 +2,98 @@
 <!-- Written by Matthew Bass
      for MSSE 661 Web Software Development
      Regis University
-     Updated for Week 5 -->
+     Updated for Week 5 
+     to use bootstrap 
+-->
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./css/fluidLayout.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>Home</title>
   </head>
 
   <body>
-    <div class="main wrapper">
 
-      <header>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-          </ul>
-          <a href="" onclick="doLogout(event)">Logout</a>
-        </nav>
-      </header>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+        </ul>
+        <a id="logout" href="" onclick="doLogout(event)">Logout</a>
+      </nav>
+    </header>
 
-      <div class="content">
-        <div id="tasks">
-          <div>Loading Test Register.....</div>
-        </div>
+    <div class="container">
+      <div class="test-form">
+        <form>
+          <div class="form-row">
+            <div class="col-md-6">
+              <label class="sr-only" for="formInputTestName">Test Name</label>
+              <input
+                id="formInputTestName"
+                class="form-control"
+                type="text"
+                name="test_name"
+                placeholder="test name"
+              />
+            </div>
+            <div class="col-md-3">
+              <label class="sr-only" for="formSelectStatus">Status</label>
+              <select
+                id="formSelectStatus"
+                class="custom-select mr-sm-2"
+                name="test_name"
+              >
+                <option value="1" selected>pending</option>
+                <option value="2">completed</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="doAddTest(event)"
+              >
+                ADD
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <footer>
-        <p id="foot">Created by Matthew Bass: mbass001@regis.edu</p>
-      </footer>
+      <div id="tests">
+        <div>Loading...</div>
+      </div>
     </div>
 
+    <footer>
+      <div class="author">
+        <p id="foot">Created by Matthew Bass: mbass001@regis.edu</p>
+      </div>
+    </footer>
+    
     <script src="./src/api.config.js"></script>
     <script src="./src/simple-storage.js"></script>
+    <script src="./src/route-guard.js"></script>
     <script src="./src/service-helpers.js"></script>
     <script src="./src/auth.service.js"></script>
     <script src="./src/testing.service.js"></script>
-    <script src="./src/route-guard.js"></script>
-    <script src="./src/build-tasks-list.js"></script>
-    <script src="./src/app.js"></script>
-
+    <script src="./src/build-tests-list.js"></script>
+    <script src="./src/add-test.js"></script>
+    <script src="./src/auth.js"></script>
+  
   </body>
 </html>

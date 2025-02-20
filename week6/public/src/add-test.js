@@ -21,5 +21,5 @@ const doAddTest = async (e) => {
     if (res !== null) {
       inst.generateTests();
     }
-    taskInput.value = '';
+    testInput.value = '';
   };

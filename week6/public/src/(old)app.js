@@ -2,7 +2,8 @@
 Written by Matthew Bass
      for MSSE 661 Web Software Development
      Regis University
-     Updated for week 5
+     
+     not currently used, functionality moved to "auth.js"
 */
 
 // login function
