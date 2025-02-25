@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- Written by Matthew Bass
+     for MSSE 661 Web Software Development
+     Regis University
+     Updated for week 6 
+     to use bootstrap
+-->
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./css/fluidLayout.css">
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity=
+                "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+        
+        <title>Login Page</title>
+
+    </head>
+
+  <body>
+        
+      <header>
+<!--    login page should not have navigation   -->
+      </header>
+
+      <div class="center">
+        <div class="card">
+           <div class="card-body">
+              <!--split content card in 1/2
+                  for login / registration-->
+              <div class="card-split">
+                <div class="right-border">
+                  <h2 class="card-title">Sign In</h2>
+                  <form novalidate>
+                    <div class="form-group">
+                      <label for="formInputUsername">Username</label>
+                      <input
+                        id="formInputUsername"
+                        type="text"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="formInputPassword">Password</label>
+                      <input
+                        id="formInputPassword"
+                        type="password"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group form-group-btn">
+                      <button class="btn btn-primary" onclick="doLogin(event)">
+                        Sign In
+                      </button>
+                    </div>
+                  </form>
+                </div>
+          
+                <div class="left-border">
+                  <h2 class="card-title">Register</h2>
+                  <form novalidate>
+                    <div class="form-group">
+                      <label for="formInputUsernameReg">Username</label>
+                      <input
+                        id="formInputUsernameReg"
+                        type="text"
+                        class="form-control"
+                        placeholder="tester"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="formInputPasswordReg">Password</label>
+                      <input
+                        id="formInputPasswordReg"
+                        type="password"
+                        class="form-control"
+                        placeholder="password"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="formInputEmailReg">Email</label>
+                      <input
+                        id="formInputEmailReg"
+                        type="email"
+                        class="form-control"
+                        placeholder="tester@testco.com"
+                      />
+                    </div>
+                    <div class="form-group form-group-btn">
+                      <button class="btn btn-primary" onclick="doRegister(event)">
+                        Sign Up
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
+    
+    <footer>
+        <div class = "author">
+            <p id="foot">Created by Matthew Bass: mbass001@regis.edu</p>
+        </div>
+    </footer>
+
+    <script src="./src/api.config.js"></script>
+    <script src="./src/simple-storage.js"></script>
+    <script src="./src/service-helpers.js"></script>
+    <script src="./src/auth.service.js"></script>
+    <script src="./src/auth.js"></script>
+
+  </body>
+</html>
